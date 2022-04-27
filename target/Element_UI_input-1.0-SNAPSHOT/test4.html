@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_input
+  File name(文件名): test4
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/27
+  Time(创建时间)： 21:51
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+    <style>
+        .el-input {
+            width: 600px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <el-input class="el-input" v-model="input_value" :clearable="true" :show-password="true"
+              placeholder="请输入密码"></el-input>
+
+    <br>
+    <br>
+    {{input_value}}
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            input_value: "",
+        },
+        methods: {},
+    })
+</script>
+</body>
+</html>

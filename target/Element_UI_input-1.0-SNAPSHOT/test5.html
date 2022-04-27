@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_input
+  File name(文件名): test5
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/27
+  Time(创建时间)： 21:54
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+    <style>
+        .el-input {
+            width: 600px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <el-input
+            placeholder="请选择日期"
+            suffix-icon="el-icon-date"
+            v-model="input1">
+    </el-input>
+    <el-input
+            placeholder="请输入内容"
+            prefix-icon="el-icon-search"
+            v-model="input2">
+    </el-input>
+
+    <br>
+    <br>
+
+    <el-input
+            placeholder="请选择日期"
+            v-model="input3">
+        <i slot="suffix" class="el-input__icon el-icon-date"></i>
+    </el-input>
+    <el-input
+            placeholder="请输入内容"
+            v-model="input4">
+        <i slot="prefix" class="el-input__icon el-icon-search"></i>
+    </el-input>
+
+    <br>
+    <br>
+    {{input1}}
+    <br>
+    {{input2}}
+    <br>
+    {{input3}}
+    <br>
+    {{input4}}
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            input1: '',
+            input2: '',
+            input3: '',
+            input4: ''
+        },
+        methods: {},
+    })
+</script>
+</body>
+</html>
