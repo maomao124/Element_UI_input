@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_input
+  File name(文件名): test11
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/27
+  Time(创建时间)： 22:20
+  Description(描述)：
+
+
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <el-input
+            type="text"
+            placeholder="请输入内容"
+            v-model="text"
+            minlength="5"
+            maxlength="10"
+            show-word-limit
+    >
+    </el-input>
+    <div style="margin: 20px 0;"></div>
+    <el-input
+            type="textarea"
+            placeholder="请输入内容"
+            v-model="textarea"
+            maxlength="30"
+            show-word-limit>
+    </el-input>
+    <br>
+    <br>
+    <br>
+    <br>
+    {{text}}
+    <br>
+    {{textarea}}
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            text: '',
+            textarea: ''
+        },
+        methods: {},
+    })
+</script>
+</body>
+</html>
